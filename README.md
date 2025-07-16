@@ -12,7 +12,7 @@ This project develops a predictive model for car CO2 emissions using the Canadia
 ## Methodology
 Univariate, bivariate, and multivariate analyses were performed using descriptive statistics (mean, standard deviation, percentiles, correlations, and frequency distributions) and visualizations, including boxplots, bar charts, pie charts, scatterplots, and heatmaps, to explore the dataset comprehensively.
 
-The dataset was divided into training (2/3) and test (1/3) sets. Five models—linear regression, LASSO regression, SVM with RBF kernel, regression trees, and XGBoost—were evaluated. Hyperparameters were optimized through cross-validation on the training set.
+The dataset was divided into training (2/3) and test (1/3) sets. Five models —linear regression, LASSO regression, SVM with RBF kernel, regression trees, and XGBoost— were evaluated. Hyperparameters were optimized through cross-validation on the training set.
 
 The notebooks are designed for seamless execution in Google Colab, including integrated data downloads from Kaggle and all necessary dependencies, ensuring immediate reproducibility without additional setup.
 
@@ -20,7 +20,9 @@ The notebooks are designed for seamless execution in Google Colab, including int
 Data Profiling and Visualization revealed compelling insights, including the detection of duplicates and outliers (e.g., high-pollution Bugatti vehicles), identification of redundant or irrelevant variables for machine learning (e.g., the categorical variable "vehicle class" and combined consumption metrics), feature engineering (e.g., adding gear count and transmission features), and strong correlations (e.g., larger engine size and cylinder count correlating with higher fuel consumption and emissions).
 
 The regression models were assessed on the test set using $R^2$ and mean squared error (MSE). The bar chart below compares the five models, with XGBoost achieving the highest performance: **0.998 $R^2$ and 7.400 MSE**. Other notable results include regression trees with 0.993 $R^2$ and SVM with RBF kernel at 0.913 $R^2$. Fuel consumption in city emerged as a key predictor, based on linear model p-values and tree-based feature importance metrics.
+
 ![Model Performance by Metric](https://raw.githubusercontent.com/alexARC26/portfolio-regression-data-viz/main/images/Results_Summary.png)
+*Figure 1: Model performance for CO₂ emissions prediction, evaluated by R² and MSE.*
 
 ## Technologies Used
 - Data exploration and transformation: `numpy` and `pandas`.
